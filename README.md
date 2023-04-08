@@ -4,4 +4,4 @@
 
  Diário de Aula.
 
-1º Trimestre
+**1º Trimestre**
