@@ -2,4 +2,6 @@
 
 ## Métodos Avaliativos
 
-## Diário de Aula.
+ Diário de Aula.
+
+1º Trimestre
