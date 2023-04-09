@@ -1,0 +1,162 @@
+import 'package:dartv/dartv.dart' as dartv;
+import 'dart:io';
+
+/*void main(List<String> arguments) {
+  print("fundamentos de variáveis");*/
+
+/*String nome ='';
+print("informe o seu nome:");
+nome = stdin.readLineSync()!;
+*/
+
+/*
+? a variavei pode ser nula
+! ele recebe um valor nulo e declara ele como não nulo
+
+var ao inves de definiar a variável como int chamar ela de var o sistema ira ler e defini-la de acordo
+quando não tem atribuição (ex.idade) = 21 se usa int 
+*/
+
+/*
+  var idade = 21;
+  var peso = 70.0;
+  /*String nome = "Vitor";*/
+  String sobreNome = "Felipe";
+  bool eProgramador = true;
+
+print(idade);
+print(nome);
+print(nome+' '+sobreNome);
+*/
+
+/*
+INSERT INTO pessoa (nome,sobrenome) 
+VALUES ('Vitor','Felipe');
+interpolação
+
+
+print("INSERT INTO pessoa (nome,sobrenome) VALUES ('"+nome+"','"+sobreNome+"')");
+
+print("INSERT INTO pessoa (nome,sobrenome) VALUES ('$nome','$sobreNome')");
+*/
+
+/*String teste = 'teste $(5 > 0)';*/
+/*tring nomeCompleto = '$nome $sobreNome';*/
+
+
+/*quebra de linha
+
+print('\nlinha1'+
+'\nlinha2'+
+'\nlinha3');
+
+print('''
+linha1
+linha2
+linha3
+''');
+*/
+
+/*atividade 01 - defina variáveis de um produto (com diversos tipos) e imprima com as devidas descrições*/
+
+/*print("Variáveis de um Produto");
+String produto = "Celular";
+String marca = "Samsung";
+String modelo = "M30";
+double peso = 0.100;
+bool carregador = true;
+
+print("O produto é um $produto"+'\n'"sua marca é $marca"+','+'\n'"e seu modelo é $modelo");*/
+
+
+
+/*atividade 02 - conforma o seu projeto particular defina as variáveis de um modelo e imprima na tela*/
+
+/*atividade 03 - ao invés e atribuir valores solicite dados
+
+String para int > int.parse
+String para double > double.parse
+int para String > variavel.toString()*/
+
+/*void main(List<String> arguments) {
+int? idade;
+double? peso;
+
+  print("Digite sua idade:");
+  idade = int.parse(stdin.readLineSync()!);
+
+  print("Digite seu peso:");
+  peso = double.parse(stdin.readLineSync()!);
+
+print('$idade'',''$peso');*/
+
+void main(List<String> arguments) {
+  print("sintaxe funções");
+  verificarAprovacao();
+  verificarAprovacao3(6,5);
+  verificarAprovacao4();
+  verificarAprovacao5(6,5);
+}
+
+//-> função sem retorno e sem parâmetro
+
+  void verificarAprovacao(){
+    double nota1, nota2, media;
+    String resultado;
+
+    print("informe nota1:");
+  nota1 = double.parse(stdin.readLineSync()!);
+
+     print("informe nota2:");
+  nota2 = double.parse(stdin.readLineSync()!);
+
+ media = (nota1 + nota2) / 2;
+
+/* 
+print( (media >= 6) ? 'aprovado' : 'reprovado');
+*/
+
+ if(media >= 6){
+  print('aprovado');
+ }else{
+  print('reprovado');
+  }
+}
+
+
+//-> função sem retorno e com parâmetro
+void verificarAprovacao3(double nota1, double nota2){
+    double media = (nota1 + nota2) / 2;
+    print((media >= 6) ?'aprovado' : 'reprovado');
+}
+
+
+// -> função com retorno e sem parâmetro
+String verificarAprovacao4(){
+  double nota1, nota2, media;
+  print('informe nota1');
+  nota1 = double.parse(stdin.readLineSync()!);
+
+  print('informe nota2');
+  nota2 = double.parse(stdin.readLineSync()!);
+
+  media = (nota1 + nota2) /2;
+
+  if(media > 6){
+    return 'aprovado';
+  }else{
+    return 'reprovado';
+  }
+
+}
+
+// -> função com retorno e com parâmetro
+String verificarAprovacao5(double nota1, double nota2){
+
+var media = (nota1 + nota2) / 2;
+if(media >6) {
+  return 'aprovado';
+}else{
+  return 'reprovado';
+}
+}
